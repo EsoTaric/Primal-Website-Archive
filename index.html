@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primal (PS2) Official Website Archive – Reconstruction</title>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --panel: #141414;
+      --accent: #8b0000;
+      --text: #e0e0e0;
+      --muted: #888;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(180deg, #1a0000 0%, var(--bg) 100%);
+      border-bottom: 1px solid #333;
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 0.25rem;
+      font-size: 1.8rem;
+      letter-spacing: 0.15em;
+      color: #c0a060;
+      text-transform: uppercase;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    .note {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+    section {
+      background: var(--panel);
+      border: 1px solid #2a2a2a;
+      border-radius: 6px;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+    section h2 {
+      margin: 0;
+      padding: 0.75rem 1rem;
+      background: #1f1f1f;
+      border-bottom: 1px solid #333;
+      font-size: 1.1rem;
+      color: #c0a060;
+    }
+    .content {
+      padding: 1rem;
+    }
+    .player {
+      display: flex;
+      justify-content: center;
+      background: #000;
+      min-height: 200px;
+    }
+    .player ruffle-player,
+    .player object,
+    .player embed {
+      max-width: 100%;
+    }
+    ul.links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.5rem;
+    }
+    ul.links a {
+      display: block;
+      padding: 0.6rem 0.8rem;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 4px;
+      color: #c0a060;
+      text-decoration: none;
+      text-align: center;
+      font-size: 0.9rem;
+      transition: background 0.15s;
+    }
+    ul.links a:hover {
+      background: #2a1a1a;
+      border-color: var(--accent);
+    }
+    .vip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 0.75rem;
+    }
+    .vip-item {
+      text-align: center;
+    }
+    .vip-item button, .vip-item a.swf-link {
+      display: block;
+      width: 100%;
+      padding: 0.7rem;
+      background: #1a1a1a;
+      border: 1px solid #444;
+      border-radius: 4px;
+      color: #ddd;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
+    .vip-item button:hover, .vip-item a.swf-link:hover {
+      background: #2a1a1a;
+      border-color: var(--accent);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid #222;
+    }
+    .warning {
+      background: #2a1500;
+      border: 1px solid #5a3000;
+      color: #e0c080;
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Primal</h1>
+    <div class="subtitle">Official PlayStation 2 Website Archive (2003)</div>
+    <p class="note">
+      Reconstruction of surviving material from the original Flash-based site (primalgame.com).<br>
+      Powered by <a href="https://ruffle.rs" style="color:#c0a060">Ruffle</a> Flash emulator. For archival / preservation purposes.
+    </p>
+  </header>
+
+  <main>
+    <div class="warning">
+      <strong>What survived:</strong> Intro cinematic, English hub + realm HTML shells, and several VIP-area SWFs (tarot, downloads, secrets, etc.).<br>
+      <strong>What is missing:</strong> The main interactive hub SWF, the six realm SWFs, character bios, the full VIP welcome experience, and the four US mini-games. Those assets were never captured by the Wayback Machine.
+    </div>
+
+    <section>
+      <h2>1. Intro Cinematic</h2>
+      <div class="player" id="intro-player">
+        <!-- Ruffle will replace this -->
+        <ruffle-player src="intro/intro.swf" width="720" height="420"></ruffle-player>
+      </div>
+      <div class="content">
+        <p style="margin:0;font-size:0.85rem;color:#888">Original opening SWF (intro.swf). Click or wait for it to load via Ruffle.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Original HTML Shells (English)</h2>
+      <div class="content">
+        <p style="margin-top:0;font-size:0.9rem;color:#aaa">These are the original page wrappers. They expect SWFs that are no longer available, so the Flash area will be blank or show an error. Kept for historical completeness.</p>
+        <ul class="links">
+          <li><a href="landing.html">Landing page</a></li>
+          <li><a href="hub/oblivion_en.html">Main Hub (Oblivion)</a></li>
+          <li><a href="realms/aetha/aetha_en.html">Aetha</a></li>
+          <li><a href="realms/aquis/aquis_en.html">Aquis</a></li>
+          <li><a href="realms/solum/solum_en.html">Solum</a></li>
+          <li><a href="realms/volca/volca_en.html">Volca</a></li>
+          <li><a href="realms/mortalis/mortalis_en.html">Mortalis</a></li>
+          <li><a href="realms/nexus/nexus_en.html">Nexus</a></li>
+          <li><a href="vip/index_en.html">VIP Area</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Surviving VIP SWFs</h2>
+      <div class="content">
+        <p style="margin-top:0;font-size:0.9rem;color:#aaa">These later captures (≈2015) of VIP-area assets still work. Click to open in a new Ruffle player window, or right-click → save.</p>
+        <div class="vip-grid">
+          <div class="vip-item">
+            <a class="swf-link" href="vip/tarot.swf" target="_blank">Tarot</a>
+          </div>
+          <div class="vip-item">
+            <a class="swf-link" href="vip/downloads.swf" target="_blank">Downloads</a>
+          </div>
+          <div class="vip-item">
+            <a class="swf-link" href="vip/secrets.swf" target="_blank">Secrets</a>
+          </div>
+          <div class="vip-item">
+            <a class="swf-link" href="vip/border.swf" target="_blank">Border</a>
+          </div>
+          <div class="vip-item">
+            <a class="swf-link" href="vip/font_sound_lib.swf" target="_blank">Font / Sound Lib</a>
+          </div>
+          <div class="vip-item">
+            <a class="swf-link" href="vip/vip_navigation.swf" target="_blank">VIP Navigation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. How to use / host this archive</h2>
+      <div class="content">
+        <ol style="margin:0;padding-left:1.2rem;font-size:0.9rem;color:#ccc">
+          <li>Open <strong>index.html</strong> in any modern browser (Chrome, Firefox, Edge, Safari). Ruffle loads automatically from CDN.</li>
+          <li>To host online: upload the entire <code>primal_ps2_archive</code> folder to any static host (GitHub Pages, Netlify, Cloudflare Pages, Neocities, your own server, etc.). No backend required.</li>
+          <li>For fully offline use: the Ruffle script is loaded from unpkg.com. If you need pure offline, download the Ruffle self-hosted package from ruffle.rs and place it in an <code>ruffle/</code> subfolder, then change the script src.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Archival reconstruction · Original site © Sony Computer Entertainment / SCEE Cambridge · Flash content emulated with Ruffle<br>
+    Assets recovered from the Internet Archive Wayback Machine · Not affiliated with Sony
+  </footer>
+
+  <script>
+    // Optional: make VIP links open in a simple Ruffle popup if desired
+    document.querySelectorAll('.swf-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        // Let the browser / Ruffle extension handle it, or open in new tab
+      });
+    });
+  </script>
+</body>
+</html>
